@@ -1,5 +1,5 @@
 # A-Simple-Text-2-Voice-Convertor
-
+ Highly focusing on JavaScript
 
 let speech = new SpeechSynthesisUtterance();
 let voices = [];
