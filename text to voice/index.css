@@ -1,0 +1,155 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #1d3557, #457b9d, #e63946);
+    background-size: 300% 300%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Heading */
+.container h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.container h1 span {
+    color: #ff6b6b;
+    border-bottom: 4px solid #ff6b6b;
+}
+
+/* Text Area */
+textarea {
+    width: 100%;
+    max-width: 700px;
+    height: 200px;
+    background: #ffffff;
+    color: #1d3557;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    resize: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+textarea::placeholder {
+    color: #9aa5b1;
+    font-size: 1rem;
+}
+
+/* Row Layout */
+.row {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Dropdown */
+select {
+    flex: 1;
+    height: 50px;
+    background: #ffffff;
+    color: #1d3557;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    padding: 0 20px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('https://img.icons8.com/material-rounded/24/1d3557/chevron-down.png');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+select:focus {
+    outline: 2px solid #457b9d;
+}
+
+/* Button */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 30px;
+    background: #e63946;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background: #c72d3b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    textarea {
+        height: 150px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+    }
+}
